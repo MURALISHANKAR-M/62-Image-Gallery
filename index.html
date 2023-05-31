@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-Image Grid</title>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            text-align: center;
+            padding: 32px;
+        }
+
+        .row {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+        }
+
+        .btn {
+            border: none;
+            outline: none;
+            padding: 10px 16px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+        .btn.active {
+            background-color: #666;
+            color: white;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="header" id="myHeader">
+            <h1>Image Gride</h1>
+            <p>Click on the buttons to change the gride view.</p>
+            <button class="btn" onclick="one()">1</button>
+            <button class="btn active" onclick="two()">2</button>
+            <button class="btn" onclick="four()">4</button>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img src="https://www.state.gov/wp-content/uploads/2019/04/Japan-2107x1406.jpg" style="width:100%">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/97/39/7f/caption.jpg?w=1200&h=-1&s=1&cx=1920&cy=1080&chk=v1_f31158e4bb953d28a308" style="width:100%">
+                <img src="https://www.travelcaffeine.com/wp-content/uploads/2018/05/kiyomizudera-temple-nighttime-illumination-fall-colors-kyoto-japan-1052.jpg" style="width:100%">
+                <img src="https://www.lifeandmoney.citi.com/sites/default/files/2019-09/00028_japanese-rice-paper-wood-doors-opened-to-an-autumn-forest.jpg" style="width:100%">
+                <img src="https://live-production.wcms.abc-cdn.net.au/995bc2f86c5fd29ee80cd1394b42939b?impolicy=wcms_crop_resize&cropH=2485&cropW=3728&xPos=0&yPos=0&width=862&height=575" style="width:100%">
+                <img src="https://photos.demandstudios.com/getty/article/194/120/skd285117sdc.jpg" style="width:100%">
+                <img src="https://peakvisor.com/photo/Japanese-Mountains-rice-terrace.jpg" style="width:100%">
+            </div>
+
+            <div class="column">
+                <img src="https://www.lowyinstitute.org/sites/default/files/styles/interpreter_article_image/public/GettyImages-1134201090.jpeg?itok=8o5Bgxq8" style="width:100%">
+                <img src="https://s01.sgp1.cdn.digitaloceanspaces.com/article/176087-yaefuawgnu-1655815974.jpg" style="width:100%">
+                <img src="https://s27363.pcdn.co/wp-content/uploads/2020/05/Seoul-South-Korea.jpg.optimal.jpg" style="width:100%">
+                <img src="https://www.cuddlynest.com/blog/wp-content/uploads/2022/11/best-temples-in-south-korea-scaled.jpg" style="width:100%">
+                <img src="https://uschamber.imgix.net/https%3A%2F%2Fwww.uschamber.com%2Fassets%2Fimages%2FSeoul-South-Korea.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fm=jpg&fp-x=0.5&fp-y=0.5&h=675&q=80&w=1200&s=f738b8c2c96d472bcd46b64453bd3659" style="width:100%">
+                <img src="https://mondediplo.com/local/cache-vignettes/L890xH568/lmd_0222_07_getty_1232996431_-56aba.jpg?1643721507" style="width:100%">
+                <img src="https://www.traveloffpath.com/wp-content/uploads/2023/03/Korean-Food.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg/1200px-View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg" style="width:100%">
+                <img src="https://lp-cms-production.imgix.net/2023-03/GettyImages-1457985219.jpg?auto=format&w=1440&h=810&fit=crop&q=75" style="width:100%">
+                <img src="https://images.rove.me/w_1920,q_85/xgbnnuqdwdtaijn5kwnj/new-york-fall-foliage.jpg" style="width:100%">
+                <img src="https://www.heart.org/-/media/Images/Affiliates/FDA/Market-Images/NYC-Home-Page-Image.png?h=500&iar=0&mw=2000&w=1200&hash=06215ED695BF9F6E68632CA3C84BD1A9" style="width:100%">
+                <img src="https://cdn.vox-cdn.com/thumbor/ipyPV0lhto2wog8OWmAAnxHb8Ig=/0x0:2000x1333/1200x900/filters:focal(840x507:1160x827):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/69704616/xian-famous-foods-lead-image.0.0.0.0.jpg" style="width:100%">
+                <img src="https://hotelnewyork.com/wp-content/uploads/sites/4/2019/11/20191118-HNY-food-Westcord-011.jpg" style="width:100%">
+                <img src="https://www.cuddlynest.com/blog/wp-content/uploads/2023/02/shopping-in-new-york-scaled.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="https://s27363.pcdn.co/wp-content/uploads/2021/01/Santorini.jpg.optimal.jpg" style="width:100%">
+                <img src="https://s27363.pcdn.co/wp-content/uploads/2021/01/Beautiful-Places-in-Europe-1.jpg.optimal.jpg" style="width:100%">
+                <img src="https://images.squarespace-cdn.com/content/v1/5890b68b29687f4ab795714c/1609589758053-0JS67U8FVZBLDGT2V4KH/Bruges" style="width:100%">
+                <img src="https://res.cloudinary.com/zicasso/image/fetch/c_fill,f_auto,g_auto,h_576,q_auto,w_865/https://images.zicasso.com/a9680674767acb31f72f45cc8320803c.jpg" style="width:100%">
+                <img src="https://cdn.shopify.com/s/files/1/0601/9697/8825/products/Mousses-_3.jpg?v=1666791608&width=480" style="width:100%">
+                <img src="https://www.debatingeurope.eu/wp-content/uploads/2014/07/holland.jpg" style="width:100%">
+                <img src="https://i.insider.com/5cd593ef021b4c1e5b1eda4a?width=750&format=jpeg&auto=webp" style="width:100%">
+            </div>
+        </div>
+
+        <script>
+            var elements = document.getElementsByClassName("column");
+
+            var i;
+
+            function one() {
+                        for (i = 0; i < elements.length; i++) {
+                        elements[i].style.msFlex = "100%";
+                        elements[i].style.flex = "100%";
+                    }
+                }
+            
+                function two() {
+                    for (i = 0;  i< element.length; i++) {
+                        elements[i].style.msFlex = "50%";
+                        elements[i].style.flex = "50%";
+                    }
+                }
+
+                function four() {
+                    for (i = 0;  i< element.length; i++) {
+                        elements[i].style.msFlex = "25%";
+                        elements[i].style.flex = "25%";
+                    }
+                }
+
+                var header = document.getElementById("myHeader");
+                var btns = header.getElementsByClassName("btn");
+                for (var i = 0; i < btns.length; i++) {
+                    btns[i].addEventListener("click", function() {
+                        var current = document.getElementsByClassName("active");
+                        current[0].className = current[0].className.replace(" active", "");
+                        this.className += " active";
+                    });
+                }
+        </script>
+</body>
+</html>
